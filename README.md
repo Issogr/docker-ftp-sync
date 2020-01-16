@@ -30,6 +30,12 @@ To use the container you need:
 docker run -d -it --rm --name ftp-sync --device /dev/fuse --privileged -v "LOCAL_FOLDER":/mnt/host -e REMOTE_URL='' -e REMOTE_USER='' -e REMOTE_PASS='' issogr/ftp-sync:latest
 ```
 
+This piece of command is NOT optional and /mnt/host is unmutable
+
+``` bash
+-v "LOCAL_FOLDER":/mnt/host
+```
+
 You need to specify the REMOTE variables and local folder
 
 ### Using tools script
